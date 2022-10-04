@@ -16,8 +16,6 @@ export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
   ...constructSameAddressMap(V3_FACTORY_ADDRESS, [
     SupportedChainId.OPTIMISM,
     SupportedChainId.OPTIMISM_GOERLI,
-    SupportedChainId.ARBITRUM_ONE,
-    SupportedChainId.ARBITRUM_RINKEBY,
     SupportedChainId.POLYGON_MUMBAI,
     SupportedChainId.POLYGON,
   ]),
@@ -25,8 +23,6 @@ export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
 
 export const V3_MIGRATOR_ADDRESSES: AddressMap = {
   ...constructSameAddressMap('0xA5644E29708357803b5A882D272c41cC0dF92B34', [
-    SupportedChainId.ARBITRUM_ONE,
-    SupportedChainId.ARBITRUM_RINKEBY,
     SupportedChainId.POLYGON_MUMBAI,
     SupportedChainId.POLYGON,
   ]),
@@ -39,16 +35,12 @@ export const MULTICALL_ADDRESS: AddressMap = {
     SupportedChainId.POLYGON_MUMBAI,
     SupportedChainId.POLYGON,
   ]),
-  [SupportedChainId.ARBITRUM_ONE]: '0xadF885960B47eA2CD9B55E6DAc6B42b7Cb2806dB',
-  [SupportedChainId.ARBITRUM_RINKEBY]: '0xa501c031958F579dB7676fF1CE78AD305794d579',
 }
 
 export const SWAP_ROUTER_ADDRESSES: AddressMap = {
   ...constructSameAddressMap('0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45', [
     SupportedChainId.OPTIMISM,
     SupportedChainId.OPTIMISM_GOERLI,
-    SupportedChainId.ARBITRUM_ONE,
-    SupportedChainId.ARBITRUM_RINKEBY,
     SupportedChainId.POLYGON,
     SupportedChainId.POLYGON_MUMBAI,
   ]),
@@ -87,8 +79,6 @@ export const QUOTER_ADDRESSES: AddressMap = {
   ...constructSameAddressMap('0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6', [
     SupportedChainId.OPTIMISM,
     SupportedChainId.OPTIMISM_GOERLI,
-    SupportedChainId.ARBITRUM_ONE,
-    SupportedChainId.ARBITRUM_RINKEBY,
     SupportedChainId.POLYGON_MUMBAI,
     SupportedChainId.POLYGON,
   ]),
@@ -98,8 +88,6 @@ export const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES: AddressMap = {
   ...constructSameAddressMap('0xC36442b4a4522E871399CD717aBDD847Ab11FE88', [
     SupportedChainId.OPTIMISM,
     SupportedChainId.OPTIMISM_GOERLI,
-    SupportedChainId.ARBITRUM_ONE,
-    SupportedChainId.ARBITRUM_RINKEBY,
     SupportedChainId.POLYGON_MUMBAI,
     SupportedChainId.POLYGON,
   ]),
@@ -114,9 +102,4 @@ export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
 
 export const SOCKS_CONTROLLER_ADDRESSES: AddressMap = {
   [SupportedChainId.MAINNET]: '0x65770b5283117639760beA3F867b69b3697a91dd',
-}
-
-export const TICK_LENS_ADDRESSES: AddressMap = {
-  [SupportedChainId.ARBITRUM_ONE]: '0xbfd8137f7d1516D3ea5cA83523914859ec47F573',
-  [SupportedChainId.ARBITRUM_RINKEBY]: '0xbfd8137f7d1516D3ea5cA83523914859ec47F573',
 }

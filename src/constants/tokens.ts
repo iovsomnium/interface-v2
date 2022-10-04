@@ -53,20 +53,6 @@ export const USDC_OPTIMISM_GOERLI = new Token(
   'USDC',
   'USD//C'
 )
-export const USDC_ARBITRUM = new Token(
-  SupportedChainId.ARBITRUM_ONE,
-  '0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8',
-  6,
-  'USDC',
-  'USD//C'
-)
-export const USDC_ARBITRUM_RINKEBY = new Token(
-  SupportedChainId.ARBITRUM_RINKEBY,
-  '0x09b98f8b2395d076514037ff7d39a091a536206c',
-  6,
-  'USDC',
-  'USD//C'
-)
 export const USDC_POLYGON = new Token(
   SupportedChainId.POLYGON,
   '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
@@ -95,13 +81,6 @@ export const DAI = new Token(
   'DAI',
   'Dai Stablecoin'
 )
-export const DAI_ARBITRUM_ONE = new Token(
-  SupportedChainId.ARBITRUM_ONE,
-  '0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1',
-  18,
-  'DAI',
-  'Dai stable coin'
-)
 export const DAI_OPTIMISM = new Token(
   SupportedChainId.OPTIMISM,
   '0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1',
@@ -111,9 +90,7 @@ export const DAI_OPTIMISM = new Token(
 )
 export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.MAINNET]: USDC_MAINNET,
-  [SupportedChainId.ARBITRUM_ONE]: USDC_ARBITRUM,
   [SupportedChainId.OPTIMISM]: USDC_OPTIMISM,
-  [SupportedChainId.ARBITRUM_RINKEBY]: USDC_ARBITRUM_RINKEBY,
   [SupportedChainId.OPTIMISM_GOERLI]: USDC_OPTIMISM_GOERLI,
   [SupportedChainId.POLYGON]: USDC_POLYGON,
   [SupportedChainId.POLYGON_MUMBAI]: USDC_POLYGON_MUMBAI,
@@ -150,13 +127,6 @@ export const USDT = new Token(
   'USDT',
   'Tether USD'
 )
-export const USDT_ARBITRUM_ONE = new Token(
-  SupportedChainId.ARBITRUM_ONE,
-  '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
-  6,
-  'USDT',
-  'Tether USD'
-)
 export const USDT_OPTIMISM = new Token(
   SupportedChainId.OPTIMISM,
   '0x94b008aA00579c1307B0EF2c499aD98a8ce58e58',
@@ -167,13 +137,6 @@ export const USDT_OPTIMISM = new Token(
 export const WBTC = new Token(
   SupportedChainId.MAINNET,
   '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
-  8,
-  'WBTC',
-  'Wrapped BTC'
-)
-export const WBTC_ARBITRUM_ONE = new Token(
-  SupportedChainId.ARBITRUM_ONE,
-  '0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f',
   8,
   'WBTC',
   'Wrapped BTC'
@@ -288,20 +251,6 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'WETH',
     'Wrapped Ether'
   ),
-  [SupportedChainId.ARBITRUM_ONE]: new Token(
-    SupportedChainId.ARBITRUM_ONE,
-    '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
-    18,
-    'WETH',
-    'Wrapped Ether'
-  ),
-  [SupportedChainId.ARBITRUM_RINKEBY]: new Token(
-    SupportedChainId.ARBITRUM_RINKEBY,
-    '0xB47e6A5f8b33b3F17603C83a0535A9dcD7E32681',
-    18,
-    'WETH',
-    'Wrapped Ether'
-  ),
   [SupportedChainId.POLYGON]: new Token(
     SupportedChainId.POLYGON,
     '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
@@ -369,9 +318,7 @@ export function nativeOnChain(chainId: number): NativeCurrency | Token {
 export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in SupportedChainId]?: string } } = {
   USDC: {
     [SupportedChainId.MAINNET]: USDC_MAINNET.address,
-    [SupportedChainId.ARBITRUM_ONE]: USDC_ARBITRUM.address,
     [SupportedChainId.OPTIMISM]: USDC_OPTIMISM.address,
-    [SupportedChainId.ARBITRUM_RINKEBY]: USDC_ARBITRUM_RINKEBY.address,
     [SupportedChainId.OPTIMISM_GOERLI]: USDC_OPTIMISM_GOERLI.address,
     [SupportedChainId.POLYGON]: USDC_POLYGON.address,
     [SupportedChainId.POLYGON_MUMBAI]: USDC_POLYGON_MUMBAI.address,

@@ -11,8 +11,6 @@ import { useAllV3Routes } from './useAllV3Routes'
 import { useQuoter } from './useContract'
 
 const QUOTE_GAS_OVERRIDES: { [chainId: number]: number } = {
-  [SupportedChainId.ARBITRUM_ONE]: 25_000_000,
-  [SupportedChainId.ARBITRUM_RINKEBY]: 25_000_000,
   [SupportedChainId.POLYGON]: 40_000_000,
   [SupportedChainId.POLYGON_MUMBAI]: 40_000_000,
 }

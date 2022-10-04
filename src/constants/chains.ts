@@ -8,9 +8,6 @@ export enum SupportedChainId {
   GOERLI = 5,
   KOVAN = 42,
 
-  ARBITRUM_ONE = 42161,
-  ARBITRUM_RINKEBY = 421611,
-
   OPTIMISM = 10,
   OPTIMISM_GOERLI = 420,
 
@@ -26,8 +23,6 @@ export const CHAIN_IDS_TO_NAMES = {
   [SupportedChainId.KOVAN]: 'kovan',
   [SupportedChainId.POLYGON]: 'polygon',
   [SupportedChainId.POLYGON_MUMBAI]: 'polygon_mumbai',
-  [SupportedChainId.ARBITRUM_ONE]: 'arbitrum',
-  [SupportedChainId.ARBITRUM_RINKEBY]: 'arbitrum_rinkeby',
   [SupportedChainId.OPTIMISM]: 'optimism',
   [SupportedChainId.OPTIMISM_GOERLI]: 'optimism_goerli',
 }
@@ -47,17 +42,12 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   SupportedChainId.MAINNET,
   SupportedChainId.POLYGON,
   SupportedChainId.OPTIMISM,
-  SupportedChainId.ARBITRUM_ONE,
 ]
 
 /**
  * Unsupported networks for V2 pool behavior.
  */
-export const UNSUPPORTED_V2POOL_CHAIN_IDS = [
-  SupportedChainId.POLYGON,
-  SupportedChainId.OPTIMISM,
-  SupportedChainId.ARBITRUM_ONE,
-]
+export const UNSUPPORTED_V2POOL_CHAIN_IDS = [SupportedChainId.POLYGON, SupportedChainId.OPTIMISM]
 
 export const TESTNET_CHAIN_IDS = [
   SupportedChainId.ROPSTEN,
@@ -65,7 +55,6 @@ export const TESTNET_CHAIN_IDS = [
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
   SupportedChainId.POLYGON_MUMBAI,
-  SupportedChainId.ARBITRUM_RINKEBY,
   SupportedChainId.OPTIMISM_GOERLI,
 ] as const
 
@@ -90,11 +79,6 @@ export type SupportedL1ChainId = typeof L1_CHAIN_IDS[number]
  * Controls some L2 specific behavior, e.g. slippage tolerance, special UI behavior.
  * The expectation is that all of these networks have immediate transaction confirmation.
  */
-export const L2_CHAIN_IDS = [
-  SupportedChainId.ARBITRUM_ONE,
-  SupportedChainId.ARBITRUM_RINKEBY,
-  SupportedChainId.OPTIMISM,
-  SupportedChainId.OPTIMISM_GOERLI,
-] as const
+export const L2_CHAIN_IDS = [SupportedChainId.OPTIMISM, SupportedChainId.OPTIMISM_GOERLI] as const
 
 export type SupportedL2ChainId = typeof L2_CHAIN_IDS[number]

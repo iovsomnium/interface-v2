@@ -116,7 +116,6 @@ function uniswapThemeColors(darkMode: boolean): ThemeColors {
     chain_5: colorsDark.chain_5,
     chain_10: colorsDark.chain_10,
     chain_137: colorsDark.chain_137,
-    chain_42: colorsDark.chain_42,
     chain_420: colorsDark.chain_420,
     chain_42161: colorsDark.chain_42161,
     chain_421611: colorsDark.chain_421611,

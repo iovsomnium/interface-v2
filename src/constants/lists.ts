@@ -13,7 +13,6 @@ const SET_LIST = 'https://raw.githubusercontent.com/SetProtocol/uniswap-tokenlis
 const WRAPPED_LIST = 'wrapped.tokensoft.eth'
 
 export const OPTIMISM_LIST = 'https://static.optimism.io/optimism.tokenlist.json'
-export const ARBITRUM_LIST = 'https://bridge.arbitrum.io/token-list-42161.json'
 
 export const UNSUPPORTED_LIST_URLS: string[] = [BA_LIST, UNI_UNSUPPORTED_LISTS]
 
@@ -31,7 +30,6 @@ const DEFAULT_LIST_OF_LISTS_TO_DISPLAY: string[] = [
   WRAPPED_LIST,
   SET_LIST,
   ROLL_LIST,
-  ARBITRUM_LIST,
   OPTIMISM_LIST,
 ]
 

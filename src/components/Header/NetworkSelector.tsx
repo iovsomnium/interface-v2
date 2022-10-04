@@ -174,9 +174,6 @@ const NetworkIcon = styled(AlertTriangle)`
 
 const BridgeLabel = ({ chainId }: { chainId: SupportedChainId }) => {
   switch (chainId) {
-    case SupportedChainId.ARBITRUM_ONE:
-    case SupportedChainId.ARBITRUM_RINKEBY:
-      return <Trans>Arbitrum Bridge</Trans>
     case SupportedChainId.OPTIMISM:
     case SupportedChainId.OPTIMISM_GOERLI:
       return <Trans>Optimism Bridge</Trans>
@@ -189,9 +186,6 @@ const BridgeLabel = ({ chainId }: { chainId: SupportedChainId }) => {
 }
 const ExplorerLabel = ({ chainId }: { chainId: SupportedChainId }) => {
   switch (chainId) {
-    case SupportedChainId.ARBITRUM_ONE:
-    case SupportedChainId.ARBITRUM_RINKEBY:
-      return <Trans>Arbiscan</Trans>
     case SupportedChainId.OPTIMISM:
     case SupportedChainId.OPTIMISM_GOERLI:
       return <Trans>Optimistic Etherscan</Trans>
@@ -265,12 +259,7 @@ function Row({
   return rowContent
 }
 
-const NETWORK_SELECTOR_CHAINS = [
-  SupportedChainId.MAINNET,
-  SupportedChainId.POLYGON,
-  SupportedChainId.OPTIMISM,
-  SupportedChainId.ARBITRUM_ONE,
-]
+const NETWORK_SELECTOR_CHAINS = [SupportedChainId.MAINNET, SupportedChainId.POLYGON, SupportedChainId.OPTIMISM]
 
 export default function NetworkSelector() {
   const { chainId, provider } = useWeb3React()

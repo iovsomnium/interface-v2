@@ -7,14 +7,12 @@ import { WrappedTokenInfo } from 'state/lists/wrappedTokenInfo'
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import MaticLogo from '../../assets/svg/matic-token-icon.svg'
 
-type Network = 'ethereum' | 'arbitrum' | 'optimism' | 'polygon'
+type Network = 'ethereum' | 'optimism' | 'polygon'
 
 function chainIdToNetworkName(networkId: SupportedChainId): Network {
   switch (networkId) {
     case SupportedChainId.MAINNET:
       return 'ethereum'
-    case SupportedChainId.ARBITRUM_ONE:
-      return 'arbitrum'
     case SupportedChainId.OPTIMISM:
       return 'optimism'
     case SupportedChainId.POLYGON:
@@ -36,7 +34,7 @@ export function getNativeLogoURI(chainId: SupportedChainId = SupportedChainId.MA
 
 export function getTokenLogoURI(address: string, chainId: SupportedChainId = SupportedChainId.MAINNET): string | void {
   const networkName = chainIdToNetworkName(chainId)
-  const networksWithUrls = [SupportedChainId.ARBITRUM_ONE, SupportedChainId.MAINNET, SupportedChainId.OPTIMISM]
+  const networksWithUrls = [SupportedChainId.MAINNET, SupportedChainId.OPTIMISM]
   if (networksWithUrls.includes(chainId)) {
     return `https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/${networkName}/assets/${address}/logo.png`
   }

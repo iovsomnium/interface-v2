@@ -1,14 +1,13 @@
 import ethereumLogoUrl from 'assets/images/ethereum-logo.png'
 import optimismCircleLogoUrl from 'assets/images/optimismCircle.png'
 import polygonCircleLogoUrl from 'assets/images/polygonCircle.png'
-import { default as arbitrumCircleLogoUrl, default as arbitrumLogoUrl } from 'assets/svg/arbitrum_logo.svg'
 import optimismLogoUrl from 'assets/svg/optimistic_ethereum.svg'
 import polygonMaticLogo from 'assets/svg/polygon-matic-logo.svg'
 import ms from 'ms.macro'
 import { colorsDark } from 'theme/colors'
 
 import { SupportedChainId, SupportedL1ChainId, SupportedL2ChainId } from './chains'
-import { ARBITRUM_LIST, OPTIMISM_LIST } from './lists'
+import { OPTIMISM_LIST } from './lists'
 
 export enum NetworkType {
   L1,
@@ -133,36 +132,6 @@ const CHAIN_INFO: ChainInfoMap = {
     helpCenterUrl: 'https://help.uniswap.org/en/collections/3137778-uniswap-on-optimistic-ethereum-oξ',
     nativeCurrency: { name: 'Optimism Goerli Ether', symbol: 'görOpETH', decimals: 18 },
     color: colorsDark.chain_420,
-  },
-  [SupportedChainId.ARBITRUM_ONE]: {
-    networkType: NetworkType.L2,
-    blockWaitMsBeforeWarning: ms`10m`,
-    bridge: 'https://bridge.arbitrum.io/',
-    docs: 'https://offchainlabs.com/',
-    explorer: 'https://arbiscan.io/',
-    infoLink: 'https://info.uniswap.org/#/arbitrum',
-    label: 'Arbitrum',
-    logoUrl: arbitrumLogoUrl,
-    circleLogoUrl: arbitrumCircleLogoUrl,
-    defaultListUrl: ARBITRUM_LIST,
-    helpCenterUrl: 'https://help.uniswap.org/en/collections/3137787-uniswap-on-arbitrum',
-    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
-    color: colorsDark.chain_42,
-    backgroundColor: colorsDark.chain_42161_background,
-  },
-  [SupportedChainId.ARBITRUM_RINKEBY]: {
-    networkType: NetworkType.L2,
-    blockWaitMsBeforeWarning: ms`10m`,
-    bridge: 'https://bridge.arbitrum.io/',
-    docs: 'https://offchainlabs.com/',
-    explorer: 'https://rinkeby-explorer.arbitrum.io/',
-    infoLink: 'https://info.uniswap.org/#/arbitrum/',
-    label: 'Arbitrum Rinkeby',
-    logoUrl: arbitrumLogoUrl,
-    defaultListUrl: ARBITRUM_LIST,
-    helpCenterUrl: 'https://help.uniswap.org/en/collections/3137787-uniswap-on-arbitrum',
-    nativeCurrency: { name: 'Rinkeby Arbitrum Ether', symbol: 'rinkArbETH', decimals: 18 },
-    color: colorsDark.chain_421611,
   },
   [SupportedChainId.POLYGON]: {
     networkType: NetworkType.L1,

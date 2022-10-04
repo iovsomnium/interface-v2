@@ -26,34 +26,6 @@ export enum ExplorerDataType {
  * @param type the type of the data
  */
 export function getExplorerLink(chainId: number, data: string, type: ExplorerDataType): string {
-  if (chainId === SupportedChainId.ARBITRUM_ONE) {
-    switch (type) {
-      case ExplorerDataType.TRANSACTION:
-        return `https://arbiscan.io/tx/${data}`
-      case ExplorerDataType.ADDRESS:
-      case ExplorerDataType.TOKEN:
-        return `https://arbiscan.io/address/${data}`
-      case ExplorerDataType.BLOCK:
-        return `https://arbiscan.io/block/${data}`
-      default:
-        return `https://arbiscan.io/`
-    }
-  }
-
-  if (chainId === SupportedChainId.ARBITRUM_RINKEBY) {
-    switch (type) {
-      case ExplorerDataType.TRANSACTION:
-        return `https://rinkeby-explorer.arbitrum.io/tx/${data}`
-      case ExplorerDataType.ADDRESS:
-      case ExplorerDataType.TOKEN:
-        return `https://rinkeby-explorer.arbitrum.io/address/${data}`
-      case ExplorerDataType.BLOCK:
-        return `https://rinkeby-explorer.arbitrum.io/block/${data}`
-      default:
-        return `https://rinkeby-explorer.arbitrum.io/`
-    }
-  }
-
   const prefix = BLOCK_EXPLORER_PREFIXES[chainId] ?? 'https://etherscan.io'
 
   switch (type) {
