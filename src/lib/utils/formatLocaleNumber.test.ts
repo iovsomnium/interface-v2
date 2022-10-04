@@ -7,42 +7,8 @@ const INPUT = 4000000.123 // 4 million
 function expectedOutput(l: SupportedLocale): string {
   switch (l) {
     case 'en-US':
-    case 'he-IL':
-    case 'ja-JP':
     case 'ko-KR':
-    case 'zh-CN':
-    case 'sw-TZ':
-    case 'zh-TW':
       return `4,000,000.123`
-    case 'fr-FR':
-      return `4 000 000,123`
-    case 'ar-SA':
-      return `٤٬٠٠٠٬٠٠٠٫١٢٣`
-    case 'cs-CZ':
-    case 'fi-FI':
-    case 'af-ZA':
-    case 'hu-HU':
-    case 'no-NO':
-    case 'pl-PL':
-    case 'pt-PT':
-    case 'ru-RU':
-    case 'sv-SE':
-    case 'uk-UA':
-      return `4 000 000,123`
-    case 'ca-ES':
-    case 'da-DK':
-    case 'de-DE':
-    case 'el-GR':
-    case 'es-ES':
-    case 'id-ID':
-    case 'it-IT':
-    case 'nl-NL':
-    case 'pt-BR':
-    case 'ro-RO':
-    case 'sr-SP':
-    case 'tr-TR':
-    case 'vi-VN':
-      return `4.000.000,123`
     default:
       throw new Error('unreachable')
   }

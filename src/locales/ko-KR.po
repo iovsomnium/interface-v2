@@ -1224,10 +1224,6 @@ msgstr "메뉴"
 msgid "Migrate"
 msgstr "마이그레이션"
 
-#: src/pages/Pool/v2.tsx
-msgid "Migrate Liquidity to V3"
-msgstr "유동성을 V3로 마이그레이션"
-
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 #: src/pages/MigrateV2/index.tsx
 msgid "Migrate V2 Liquidity"

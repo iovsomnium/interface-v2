@@ -3,8 +3,6 @@ import * as useV3Positions from 'hooks/useV3Positions'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { render, screen } from 'test-utils'
 
-import Pool from '.'
-
 jest.mock('@web3-react/core', () => {
   const web3React = jest.requireActual('@web3-react/core')
   return {
@@ -22,11 +20,7 @@ describe('networks', () => {
       return { loading: false, positions: undefined }
     })
 
-    render(
-      <Router>
-        <Pool />
-      </Router>
-    )
+    render(<Router></Router>)
     expect(screen.getByText('Your connected network is unsupported.')).toBeInTheDocument()
   })
 
@@ -36,11 +30,7 @@ describe('networks', () => {
       return { loading: false, positions: undefined }
     })
 
-    render(
-      <Router>
-        <Pool />
-      </Router>
-    )
+    render(<Router></Router>)
     expect(screen.getByText('Your active V3 liquidity positions will appear here.')).toBeInTheDocument()
   })
 })
