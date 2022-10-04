@@ -24,7 +24,6 @@ const NETWORK_SELECTOR_CHAINS = [
   SupportedChainId.POLYGON,
   SupportedChainId.OPTIMISM,
   SupportedChainId.ARBITRUM_ONE,
-  SupportedChainId.CELO,
 ]
 
 interface ChainSelectorProps {

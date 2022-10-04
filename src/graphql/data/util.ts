@@ -31,8 +31,6 @@ export const CHAIN_ID_TO_BACKEND_NAME: { [key: number]: Chain } = {
   [SupportedChainId.GOERLI]: 'ETHEREUM_GOERLI',
   [SupportedChainId.POLYGON]: 'POLYGON',
   [SupportedChainId.POLYGON_MUMBAI]: 'POLYGON',
-  [SupportedChainId.CELO]: 'CELO',
-  [SupportedChainId.CELO_ALFAJORES]: 'CELO',
   [SupportedChainId.ARBITRUM_ONE]: 'ARBITRUM',
   [SupportedChainId.ARBITRUM_RINKEBY]: 'ARBITRUM',
   [SupportedChainId.OPTIMISM]: 'OPTIMISM',
@@ -47,7 +45,6 @@ export function useGlobalChainName() {
 export const URL_CHAIN_PARAM_TO_BACKEND: { [key: string]: Chain } = {
   ethereum: 'ETHEREUM',
   polygon: 'POLYGON',
-  celo: 'CELO',
   arbitrum: 'ARBITRUM',
   optimism: 'OPTIMISM',
 }
@@ -59,12 +56,11 @@ export function validateUrlChainParam(chainName: string | undefined) {
 export const CHAIN_NAME_TO_CHAIN_ID: { [key: string]: SupportedChainId } = {
   ETHEREUM: SupportedChainId.MAINNET,
   POLYGON: SupportedChainId.POLYGON,
-  CELO: SupportedChainId.CELO,
   ARBITRUM: SupportedChainId.ARBITRUM_ONE,
   OPTIMISM: SupportedChainId.OPTIMISM,
 }
 
-export const BACKEND_CHAIN_NAMES: Chain[] = ['ARBITRUM', 'CELO', 'ETHEREUM', 'OPTIMISM', 'POLYGON']
+export const BACKEND_CHAIN_NAMES: Chain[] = ['ARBITRUM', 'ETHEREUM', 'OPTIMISM', 'POLYGON']
 
 export function isValidBackendChainName(chainName: string | undefined): chainName is Chain {
   if (!chainName) return false

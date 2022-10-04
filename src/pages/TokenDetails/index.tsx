@@ -21,7 +21,7 @@ import TokenSafetyModal from 'components/TokenSafety/TokenSafetyModal'
 import Widget, { WIDGET_WIDTH } from 'components/Widget'
 import { getChainInfo } from 'constants/chainInfo'
 import { L1_CHAIN_IDS, L2_CHAIN_IDS, SupportedChainId, TESTNET_CHAIN_IDS } from 'constants/chains'
-import { isCelo, nativeOnChain } from 'constants/tokens'
+import { nativeOnChain } from 'constants/tokens'
 import { checkWarning } from 'constants/tokenSafety'
 import { Chain } from 'graphql/data/__generated__/TokenQuery.graphql'
 import { useTokenQuery } from 'graphql/data/Token'
@@ -191,18 +191,11 @@ export default function TokenDetails() {
       })
     : null
 
-  const widgetToken = useMemo(() => {
-    const currentChainId = CHAIN_NAME_TO_CHAIN_ID[currentChainName]
-    // The widget is not yet configured to use Celo.
-    if (isCelo(chainId) || isCelo(currentChainId)) return undefined
-
-    return (
-      nativeCurrency ??
-      (token?.address && token.symbol && token.name
-        ? new Token(currentChainId, token.address, 18, token.symbol, token.name)
-        : undefined)
-    )
-  }, [chainId, currentChainName, nativeCurrency, token?.address, token?.name, token?.symbol])
+  const widgetToken =
+    nativeCurrency ??
+    (token?.address && token.symbol && token.name
+      ? new Token(CHAIN_NAME_TO_CHAIN_ID[currentChainName], token.address, 18, token.symbol, token.name)
+      : undefined)
 
   return (
     <TokenDetailsLayout>

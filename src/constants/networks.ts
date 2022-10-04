@@ -79,14 +79,6 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
     // "Safe" URLs
     'https://goerli.optimism.io',
   ],
-  [SupportedChainId.CELO]: [
-    // "Safe" URLs
-    `https://forno.celo.org`,
-  ],
-  [SupportedChainId.CELO_ALFAJORES]: [
-    // "Safe" URLs
-    `https://alfajores-forno.celo-testnet.org`,
-  ],
 }
 
 /**
@@ -132,6 +124,4 @@ export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
     `https://polygon-mumbai.infura.io/v3/${INFURA_KEY}`,
     ...FALLBACK_URLS[SupportedChainId.POLYGON_MUMBAI],
   ],
-  [SupportedChainId.CELO]: FALLBACK_URLS[SupportedChainId.CELO],
-  [SupportedChainId.CELO_ALFAJORES]: FALLBACK_URLS[SupportedChainId.CELO_ALFAJORES],
 }
