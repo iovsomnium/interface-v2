@@ -38,12 +38,6 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
     // "Fallback" URLs
     'https://rpc.ankr.com/eth_goerli',
   ],
-  [SupportedChainId.KOVAN]: [
-    // "Safe" URLs
-    'https://kovan.poa.network',
-    // "Fallback" URLs
-    'https://eth-kovan.public.blastapi.io',
-  ],
   [SupportedChainId.POLYGON]: [
     // "Safe" URLs
     'https://polygon-rpc.com/',
@@ -79,7 +73,6 @@ export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
     ...FALLBACK_URLS[SupportedChainId.ROPSTEN],
   ],
   [SupportedChainId.GOERLI]: [`https://goerli.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[SupportedChainId.GOERLI]],
-  [SupportedChainId.KOVAN]: [`https://kovan.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[SupportedChainId.KOVAN]],
   [SupportedChainId.OPTIMISM]: [
     `https://optimism-mainnet.infura.io/v3/${INFURA_KEY}`,
     ...FALLBACK_URLS[SupportedChainId.OPTIMISM],

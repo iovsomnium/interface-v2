@@ -81,16 +81,6 @@ const CHAIN_INFO: ChainInfoMap = {
     nativeCurrency: { name: 'Ropsten Ether', symbol: 'ropETH', decimals: 18 },
     color: colorsDark.chain_3,
   },
-  [SupportedChainId.KOVAN]: {
-    networkType: NetworkType.L1,
-    docs: 'https://docs.uniswap.org/',
-    explorer: 'https://kovan.etherscan.io/',
-    infoLink: 'https://info.uniswap.org/#/',
-    label: 'Kovan',
-    logoUrl: ethereumLogoUrl,
-    nativeCurrency: { name: 'Kovan Ether', symbol: 'kovETH', decimals: 18 },
-    color: colorsDark.chain_420,
-  },
   [SupportedChainId.GOERLI]: {
     networkType: NetworkType.L1,
     docs: 'https://docs.uniswap.org/',

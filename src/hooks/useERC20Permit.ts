@@ -49,9 +49,6 @@ const PERMITTABLE_TOKENS: {
   5: {
     [UNI[5].address]: { type: PermitType.AMOUNT, name: 'Uniswap' },
   },
-  42: {
-    [UNI[42].address]: { type: PermitType.AMOUNT, name: 'Uniswap' },
-  },
 }
 
 export enum UseERC20PermitState {

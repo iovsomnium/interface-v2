@@ -6,7 +6,6 @@ export enum SupportedChainId {
   ROPSTEN = 3,
   RINKEBY = 4,
   GOERLI = 5,
-  KOVAN = 42,
 
   OPTIMISM = 10,
 
@@ -18,7 +17,6 @@ export const CHAIN_IDS_TO_NAMES = {
   [SupportedChainId.ROPSTEN]: 'ropsten',
   [SupportedChainId.RINKEBY]: 'rinkeby',
   [SupportedChainId.GOERLI]: 'goerli',
-  [SupportedChainId.KOVAN]: 'kovan',
   [SupportedChainId.POLYGON]: 'polygon',
   [SupportedChainId.OPTIMISM]: 'optimism',
 }
@@ -45,12 +43,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
  */
 export const UNSUPPORTED_V2POOL_CHAIN_IDS = [SupportedChainId.POLYGON, SupportedChainId.OPTIMISM]
 
-export const TESTNET_CHAIN_IDS = [
-  SupportedChainId.ROPSTEN,
-  SupportedChainId.RINKEBY,
-  SupportedChainId.GOERLI,
-  SupportedChainId.KOVAN,
-] as const
+export const TESTNET_CHAIN_IDS = [SupportedChainId.ROPSTEN, SupportedChainId.RINKEBY, SupportedChainId.GOERLI] as const
 
 export type SupportedTestnetChainId = typeof TESTNET_CHAIN_IDS[number]
 
@@ -62,7 +55,6 @@ export const L1_CHAIN_IDS = [
   SupportedChainId.ROPSTEN,
   SupportedChainId.RINKEBY,
   SupportedChainId.GOERLI,
-  SupportedChainId.KOVAN,
   SupportedChainId.POLYGON,
 ] as const
 

@@ -32,13 +32,6 @@ export const USDC_GOERLI = new Token(
   'USDC',
   'USD//C'
 )
-export const USDC_KOVAN = new Token(
-  SupportedChainId.KOVAN,
-  '0x31eeb2d0f9b6fd8642914ab10f4dd473677d80df',
-  6,
-  'USDC',
-  'USD//C'
-)
 export const USDC_OPTIMISM = new Token(
   SupportedChainId.OPTIMISM,
   '0x7F5c764cBc14f9669B88837ca1490cCa17c31607',
@@ -80,7 +73,6 @@ export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.POLYGON]: USDC_POLYGON,
   [SupportedChainId.GOERLI]: USDC_GOERLI,
   [SupportedChainId.RINKEBY]: USDC_RINKEBY,
-  [SupportedChainId.KOVAN]: USDC_KOVAN,
   [SupportedChainId.ROPSTEN]: USDC_ROPSTEN,
 }
 export const DAI_POLYGON = new Token(
@@ -209,7 +201,6 @@ export const UNI: { [chainId: number]: Token } = {
   [SupportedChainId.RINKEBY]: new Token(SupportedChainId.RINKEBY, UNI_ADDRESS[4], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.ROPSTEN]: new Token(SupportedChainId.ROPSTEN, UNI_ADDRESS[3], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.GOERLI]: new Token(SupportedChainId.GOERLI, UNI_ADDRESS[5], 18, 'UNI', 'Uniswap'),
-  [SupportedChainId.KOVAN]: new Token(SupportedChainId.KOVAN, UNI_ADDRESS[42], 18, 'UNI', 'Uniswap'),
 }
 
 export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } = {
@@ -285,7 +276,6 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in SupportedCha
     [SupportedChainId.POLYGON]: USDC_POLYGON.address,
     [SupportedChainId.GOERLI]: USDC_GOERLI.address,
     [SupportedChainId.RINKEBY]: USDC_RINKEBY.address,
-    [SupportedChainId.KOVAN]: USDC_KOVAN.address,
     [SupportedChainId.ROPSTEN]: USDC_ROPSTEN.address,
   },
 }
