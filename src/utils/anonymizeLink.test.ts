@@ -15,19 +15,4 @@ describe('#anonymizeLink', () => {
       'https://rinkeby.etherscan.io/address/***'
     )
   })
-  it('anonymizes any addresses in testnet etherscan urls', () => {
-    expect(anonymizeLink('https://ropsten.etherscan.io/address/0xabcd')).toEqual(
-      'https://ropsten.etherscan.io/address/***'
-    )
-  })
-  it('anonymizes hashes in the middle of the url', () => {
-    expect(anonymizeLink('https://ropsten.etherscan.io/address/0xabcd/test')).toEqual(
-      'https://ropsten.etherscan.io/address/***/test'
-    )
-  })
-  it('does not anonymize 0x', () => {
-    expect(anonymizeLink('https://ropsten.etherscan.io/address/0x/test')).toEqual(
-      'https://ropsten.etherscan.io/address/0x/test'
-    )
-  })
 })

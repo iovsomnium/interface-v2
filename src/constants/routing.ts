@@ -103,10 +103,6 @@ export const COMMON_BASES: ChainCurrencyList = {
     WBTC,
     WRAPPED_NATIVE_CURRENCY[SupportedChainId.MAINNET] as Token,
   ],
-  [SupportedChainId.ROPSTEN]: [
-    nativeOnChain(SupportedChainId.ROPSTEN),
-    WRAPPED_NATIVE_CURRENCY[SupportedChainId.ROPSTEN] as Token,
-  ],
   [SupportedChainId.RINKEBY]: [
     nativeOnChain(SupportedChainId.RINKEBY),
     WRAPPED_NATIVE_CURRENCY[SupportedChainId.RINKEBY] as Token,

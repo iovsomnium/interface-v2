@@ -16,9 +16,6 @@ describe('#getExplorerLink', () => {
   it('polygon', () => {
     expect(getExplorerLink(137, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://polygonscan.com/address/abc')
   })
-  it('ropsten', () => {
-    expect(getExplorerLink(3, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://ropsten.etherscan.io/address/abc')
-  })
   it('enum', () => {
     expect(getExplorerLink(4, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://rinkeby.etherscan.io/address/abc')
   })

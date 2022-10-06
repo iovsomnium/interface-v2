@@ -71,16 +71,6 @@ const CHAIN_INFO: ChainInfoMap = {
     nativeCurrency: { name: 'Rinkeby Ether', symbol: 'rETH', decimals: 18 },
     color: colorsDark.chain_4,
   },
-  [SupportedChainId.ROPSTEN]: {
-    networkType: NetworkType.L1,
-    docs: 'https://docs.uniswap.org/',
-    explorer: 'https://ropsten.etherscan.io/',
-    infoLink: 'https://info.uniswap.org/#/',
-    label: 'Ropsten',
-    logoUrl: ethereumLogoUrl,
-    nativeCurrency: { name: 'Ropsten Ether', symbol: 'ropETH', decimals: 18 },
-    color: colorsDark.chain_3,
-  },
   [SupportedChainId.GOERLI]: {
     networkType: NetworkType.L1,
     docs: 'https://docs.uniswap.org/',
