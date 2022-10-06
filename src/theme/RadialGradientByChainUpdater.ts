@@ -51,7 +51,6 @@ export default function RadialGradientByChainUpdater(): null {
         backgroundRadialGradientElement.style.background = darkMode ? optimismDarkGradient : optimismLightGradient
         break
       case SupportedChainId.POLYGON:
-      case SupportedChainId.POLYGON_MUMBAI:
         setBackground(backgroundResetStyles)
         const polygonLightGradient = redesignFlagEnabled
           ? 'radial-gradient(100% 100% at 50% 0%, rgba(130, 71, 229, 0.2) 0%, rgba(200, 168, 255, 0.05) 52.6%, rgba(0, 0, 0, 0) 100%), #FFFFFF'

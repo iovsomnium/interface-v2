@@ -27,7 +27,6 @@ import {
   WBTC_OPTIMISM,
   WBTC_POLYGON,
   WETH_POLYGON,
-  WETH_POLYGON_MUMBAI,
   WRAPPED_NATIVE_CURRENCY,
 } from './tokens'
 
@@ -134,11 +133,6 @@ export const COMMON_BASES: ChainCurrencyList = {
     DAI_POLYGON,
     USDT_POLYGON,
     WBTC_POLYGON,
-  ],
-  [SupportedChainId.POLYGON_MUMBAI]: [
-    nativeOnChain(SupportedChainId.POLYGON_MUMBAI),
-    WRAPPED_NATIVE_CURRENCY[SupportedChainId.POLYGON_MUMBAI] as Token,
-    WETH_POLYGON_MUMBAI,
   ],
 }
 

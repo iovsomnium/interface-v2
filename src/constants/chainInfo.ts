@@ -132,17 +132,6 @@ const CHAIN_INFO: ChainInfoMap = {
     color: colorsDark.chain_137,
     backgroundColor: colorsDark.chain_137_background,
   },
-  [SupportedChainId.POLYGON_MUMBAI]: {
-    networkType: NetworkType.L1,
-    blockWaitMsBeforeWarning: ms`10m`,
-    bridge: 'https://wallet.polygon.technology/bridge',
-    docs: 'https://polygon.io/',
-    explorer: 'https://mumbai.polygonscan.com/',
-    infoLink: 'https://info.uniswap.org/#/polygon/',
-    label: 'Polygon Mumbai',
-    logoUrl: polygonMaticLogo,
-    nativeCurrency: { name: 'Polygon Mumbai Matic', symbol: 'mMATIC', decimals: 18 },
-  },
 }
 
 export function getChainInfo(chainId: SupportedL1ChainId): L1ChainInfo

@@ -8,7 +8,6 @@ const BLOCK_EXPLORER_PREFIXES: { [chainId: number]: string } = {
   [SupportedChainId.KOVAN]: 'https://kovan.etherscan.io',
   [SupportedChainId.OPTIMISM]: 'https://optimistic.etherscan.io',
   [SupportedChainId.POLYGON]: 'https://polygonscan.com',
-  [SupportedChainId.POLYGON_MUMBAI]: 'https://mumbai.polygonscan.com',
 }
 
 export enum ExplorerDataType {

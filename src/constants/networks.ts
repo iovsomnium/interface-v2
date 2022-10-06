@@ -53,12 +53,6 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
     'https://rpc-mainnet.matic.quiknode.pro',
     'https://matic-mainnet-full-rpc.bwarelabs.com',
   ],
-  [SupportedChainId.POLYGON_MUMBAI]: [
-    // "Safe" URLs
-    'https://matic-mumbai.chainstacklabs.com',
-    'https://rpc-mumbai.maticvigil.com',
-    'https://matic-testnet-archive-rpc.bwarelabs.com',
-  ],
   [SupportedChainId.OPTIMISM]: [
     // "Safe" URLs
     'https://mainnet.optimism.io/',
@@ -93,9 +87,5 @@ export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
   [SupportedChainId.POLYGON]: [
     `https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`,
     ...FALLBACK_URLS[SupportedChainId.POLYGON],
-  ],
-  [SupportedChainId.POLYGON_MUMBAI]: [
-    `https://polygon-mumbai.infura.io/v3/${INFURA_KEY}`,
-    ...FALLBACK_URLS[SupportedChainId.POLYGON_MUMBAI],
   ],
 }

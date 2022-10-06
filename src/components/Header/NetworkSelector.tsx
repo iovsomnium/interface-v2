@@ -177,7 +177,6 @@ const BridgeLabel = ({ chainId }: { chainId: SupportedChainId }) => {
     case SupportedChainId.OPTIMISM:
       return <Trans>Optimism Bridge</Trans>
     case SupportedChainId.POLYGON:
-    case SupportedChainId.POLYGON_MUMBAI:
       return <Trans>Polygon Bridge</Trans>
     default:
       return <Trans>Bridge</Trans>
@@ -188,7 +187,6 @@ const ExplorerLabel = ({ chainId }: { chainId: SupportedChainId }) => {
     case SupportedChainId.OPTIMISM:
       return <Trans>Optimistic Etherscan</Trans>
     case SupportedChainId.POLYGON:
-    case SupportedChainId.POLYGON_MUMBAI:
       return <Trans>Polygonscan</Trans>
     default:
       return <Trans>Etherscan</Trans>

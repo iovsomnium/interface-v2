@@ -25,7 +25,6 @@ function chainIdToNetworkName(networkId: SupportedChainId): Network {
 export function getNativeLogoURI(chainId: SupportedChainId = SupportedChainId.MAINNET): string {
   switch (chainId) {
     case SupportedChainId.POLYGON:
-    case SupportedChainId.POLYGON_MUMBAI:
       return MaticLogo
     default:
       return EthereumLogo
