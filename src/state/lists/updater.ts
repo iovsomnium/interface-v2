@@ -30,7 +30,7 @@ export default function Updater(): null {
   }, [fetchList, isWindowVisible, lists])
 
   useEffect(() => {
-    if (chainId && [SupportedChainId.OPTIMISM, SupportedChainId.OPTIMISM_GOERLI].includes(chainId)) {
+    if (chainId && [SupportedChainId.OPTIMISM].includes(chainId)) {
       dispatch(enableList(OPTIMISM_LIST))
     }
   }, [chainId, dispatch])

@@ -32,7 +32,6 @@ export const CHAIN_ID_TO_BACKEND_NAME: { [key: number]: Chain } = {
   [SupportedChainId.POLYGON]: 'POLYGON',
   [SupportedChainId.POLYGON_MUMBAI]: 'POLYGON',
   [SupportedChainId.OPTIMISM]: 'OPTIMISM',
-  [SupportedChainId.OPTIMISM_GOERLI]: 'OPTIMISM',
 }
 
 export function useGlobalChainName() {

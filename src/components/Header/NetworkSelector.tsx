@@ -175,7 +175,6 @@ const NetworkIcon = styled(AlertTriangle)`
 const BridgeLabel = ({ chainId }: { chainId: SupportedChainId }) => {
   switch (chainId) {
     case SupportedChainId.OPTIMISM:
-    case SupportedChainId.OPTIMISM_GOERLI:
       return <Trans>Optimism Bridge</Trans>
     case SupportedChainId.POLYGON:
     case SupportedChainId.POLYGON_MUMBAI:
@@ -187,7 +186,6 @@ const BridgeLabel = ({ chainId }: { chainId: SupportedChainId }) => {
 const ExplorerLabel = ({ chainId }: { chainId: SupportedChainId }) => {
   switch (chainId) {
     case SupportedChainId.OPTIMISM:
-    case SupportedChainId.OPTIMISM_GOERLI:
       return <Trans>Optimistic Etherscan</Trans>
     case SupportedChainId.POLYGON:
     case SupportedChainId.POLYGON_MUMBAI:
