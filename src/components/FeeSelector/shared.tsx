@@ -10,7 +10,12 @@ export const FEE_AMOUNT_DETAIL: Record<
   [FeeAmount.LOWEST]: {
     label: '0.01',
     description: <Trans>Best for very stable pairs.</Trans>,
-    supportedChains: [SupportedChainId.MAINNET, SupportedChainId.POLYGON, SupportedChainId.OPTIMISM],
+    supportedChains: [
+      SupportedChainId.MAINNET,
+      SupportedChainId.POLYGON,
+      SupportedChainId.OPTIMISM,
+      SupportedChainId.SEPOLIA,
+    ],
   },
   [FeeAmount.LOW]: {
     label: '0.05',

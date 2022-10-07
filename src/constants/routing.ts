@@ -111,6 +111,10 @@ export const COMMON_BASES: ChainCurrencyList = {
     nativeOnChain(SupportedChainId.GOERLI),
     WRAPPED_NATIVE_CURRENCY[SupportedChainId.GOERLI] as Token,
   ],
+  [SupportedChainId.SEPOLIA]: [
+    nativeOnChain(SupportedChainId.SEPOLIA),
+    WRAPPED_NATIVE_CURRENCY[SupportedChainId.SEPOLIA] as Token,
+  ],
   [SupportedChainId.OPTIMISM]: [
     nativeOnChain(SupportedChainId.OPTIMISM),
     DAI_OPTIMISM,

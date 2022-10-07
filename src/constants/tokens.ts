@@ -25,6 +25,13 @@ export const USDC_GOERLI = new Token(
   'USDC',
   'USD//C'
 )
+export const USDC_SEPOLIA = new Token(
+  SupportedChainId.SEPOLIA,
+  '0x07865c6e87b9f70255377e024ace6630c1eaa37f',
+  6,
+  'USDC',
+  'USD//C'
+)
 export const USDC_OPTIMISM = new Token(
   SupportedChainId.OPTIMISM,
   '0x7F5c764cBc14f9669B88837ca1490cCa17c31607',
@@ -65,6 +72,7 @@ export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.OPTIMISM]: USDC_OPTIMISM,
   [SupportedChainId.POLYGON]: USDC_POLYGON,
   [SupportedChainId.GOERLI]: USDC_GOERLI,
+  [SupportedChainId.SEPOLIA]: USDC_GOERLI,
   [SupportedChainId.RINKEBY]: USDC_RINKEBY,
 }
 export const DAI_POLYGON = new Token(
@@ -210,6 +218,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'WMATIC',
     'Wrapped MATIC'
   ),
+  [SupportedChainId.SEPOLIA]: new Token(
+    SupportedChainId.SEPOLIA,
+    '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+    18,
+    'dancingETH',
+    'Sepolia Ether'
+  ),
 }
 
 function isMatic(chainId: number): chainId is SupportedChainId.POLYGON {
@@ -266,6 +281,7 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in SupportedCha
     [SupportedChainId.OPTIMISM]: USDC_OPTIMISM.address,
     [SupportedChainId.POLYGON]: USDC_POLYGON.address,
     [SupportedChainId.GOERLI]: USDC_GOERLI.address,
+    [SupportedChainId.SEPOLIA]: USDC_SEPOLIA.address,
     [SupportedChainId.RINKEBY]: USDC_RINKEBY.address,
   },
 }
